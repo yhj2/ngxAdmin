@@ -2,15 +2,16 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'E-commerce',
+    title: '信息',
     icon: 'shopping-cart-outline',
     link: '/pages/dashboard',
-    home: true,
+
   },
   {
     title: 'IoT Dashboard',
     icon: 'home-outline',
     link: '/pages/iot-dashboard',
+    home: true,
   },
   {
     title: 'FEATURES',
@@ -241,6 +242,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Reset Password',
         link: '/auth/reset-password',
+      },
+    ],
+  },
+  {
+    title: 'hello world',
+    icon: 'github-outline',
+    children: [
+      {
+        title: '我的组件',
+        link: '/pages/my-components',
       },
     ],
   },

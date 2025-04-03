@@ -5,19 +5,26 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import { MyComponent } from './my/my.component';
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
     {
-      path: 'dashboard',
-      component: ECommerceComponent,
-    },
-    {
       path: 'iot-dashboard',
       component: DashboardComponent,
     },
+    {
+      path: 'my-components',
+      component: MyComponent,
+    },
+    {
+      path: 'dashboard',
+      component: ECommerceComponent,
+    },
+
+
     {
       path: 'layout',
       loadChildren: () => import('./layout/layout.module')
@@ -70,7 +77,7 @@ const routes: Routes = [{
     },
     {
       path: '',
-      redirectTo: 'dashboard',
+      redirectTo: 'my-components',
       pathMatch: 'full',
     },
     {
