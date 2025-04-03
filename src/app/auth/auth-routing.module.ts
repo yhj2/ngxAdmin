@@ -6,18 +6,23 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [{
   path: '',
-  component: NbAuthComponent,
-  children: [
-    {
-      path: 'login',
-      component: LoginComponent,
-    },
-  ],
+  component: LoginComponent,
+//   children: [
+//     {
+//       path: 'login',
+//       component: LoginComponent,
+//     },
+//     {
+//         path: '',
+//         redirectTo: 'login',
+//         pathMatch: 'full',
+//       },
+//   ],
 }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PagesRoutingModule {
+export class AuthRoutingModule {
 }
